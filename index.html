@@ -3,7 +3,7 @@
   <head>
     <title>Adder</title>
     <script>
-      document.onLoad = function() {
+      window.onLoad = function() {
         var urlSearch = window.location.search;
         if (urlSearch.length > 0) {
           var params = new URLSearchParams(window.location.search);
@@ -13,7 +13,7 @@
         }
         document.getElementById("plus").onClick = function() {
           var answer = document.getElementById("answer");
-          answer.innerHTML = answer + 1;
+          answer.innerHTML = answer.innerHTML + 1;
         }
       }
     </script>
@@ -26,7 +26,7 @@
       <input type="text" id="b" name="b">
       <input id="submit" type="submit" value="Submit">
     </form><br/>
-    <button id="plus" value="add for me">
+    <button id="plus">Add For Me!</button>
     <p id="answer"></p>
   </body>
 </html>
