@@ -3,9 +3,9 @@
   <head>
     <title>Adder</title>
     <script>
-      var url = window.location.search;
-      var a = url.searchParams.get("a");
-      var b = url.searchParams.get("b");
+      var params = new URLSearchParams(window.location.search);
+      var a = params.get("a");
+      var b = params.get("b");
       document.getElementById("answer").innerHTML = a * b;
     </script>
   </head>
