@@ -1,8 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>header</title>
-    
+    <title>Adder</title>
+    <script>
+      var url = window.location.search;
+      var a = url.searchParams.get("a");
+      var b = url.searchParams.get("b");
+      document.getElementById("answer").innerHTML = a * b;
+    </script>
   </head>
   <body>
     <form>
@@ -13,12 +18,6 @@
       <input id="submit" type="submit" value="Submit">
     </form>
     <p id="answer"></p>
-    <script>
-      document.getElementById("submit").onclick = function() {
-        var a = document.getElementById("a").textContent;
-        var b = document.getElementById("b").textContent;
-        document.getElementById("answer").innerHTML = a * b;
-      }
-    </script>
+    
   </body>
 </html>
