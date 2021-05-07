@@ -24,7 +24,8 @@
         }
         document.getElementById("plus").onclick = function() {
           var answer = document.getElementById("answer");
-          answer.innerHTML = Number(answer.innerHTML) + 1;
+          var current = Number(answer.innerHTML);
+          answer.innerHTML = current + 1;
         }
       }
     </script>
