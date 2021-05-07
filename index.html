@@ -18,13 +18,13 @@
         var urlSearch = window.location.search;
         if (urlSearch.length > 0) {
           var params = new URLSearchParams(urlSearch);
-          var a = params.get("a");
-          var b = params.get("b");
+          var a = Number(params.get("a"));
+          var b = Number(params.get("b"));
           document.getElementById("answer").innerHTML = a + b;
         }
         document.getElementById("plus").onclick = function() {
           var answer = document.getElementById("answer");
-          answer.innerHTML = answer.innerHTML + 1;
+          answer.innerHTML = Number(answer.innerHTML) + 1;
         }
       }
     </script>
